@@ -1,5 +1,5 @@
 # 基本原理
-容器通过访问 Fargate Metadata Endpoint 获取 Task 相关的信息，包括 IP 等
+容器通过访问 [Fargate Metadata Endpoint](https://docs.aws.amazon.com/AmazonECS/latest/userguide/task-metadata-endpoint-v4-fargate.html) 获取 Task 相关的信息，包括 IP 等
 容器镜像打包时，在 [Dockerfile](Dockerfile) 中指定 ENTRYPOINT 执行启动脚本 [entrypoint.sh](entrypoint.sh) ，在启动脚本通过 curl Metadata Endpoint 获取容器 IP 信息，并做为启动程序（如Java)的参数，以帮助应用程序获取正确的容器 IP 地址
 
 # 与常见服务发现组件集成
