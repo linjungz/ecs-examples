@@ -40,3 +40,6 @@ aws ecs execute-command --cluster test --task 2ba90f21bdfb4ccfbf5e2e0743e55375 -
 ```
 
 如果 AWS CLI 报错，则需要升级至最新版本，以确保 CLI 支持 exec 功能
+
+### 参考
+https://aws.amazon.com/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/
